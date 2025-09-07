@@ -32,8 +32,8 @@ class Booking:
     def __init__(self, guest, room, check_in_date, check_out_date):
         self.guest=guest
         self.room=room
-        self.check_in_date=datetime.strptime(check_in_date,"%d-%m-%Y")
-        self.check_out_date=datetime.strptime(check_out_date,"%d-%m-%Y")
+        self.check_in_date=datetime.strptime(check_in_date,"%Y-%m-%d")
+        self.check_out_date=datetime.strptime(check_out_date,"%Y-%m-%d")
         self.total_price=self.calculate_price()
 
     def calculate_price(self):
